@@ -116,6 +116,7 @@ https://github.com/Cswapi/Web-Server
 前端使用`vue`框架搭建，`npm`安装框架
 - 首先安装npm：`sudo apt install npm`(依赖`nodejs`，所以需要先安装node)
 - 然后安装`vue-cli`脚手架：`sudo npm install -g vue-cli`（-g为安装到全局）
+   - node和npm版本要在`4`以上（node -v, npm -v）
    - 由于最初的源使用`npm install`命令时非常的慢，所以可以通过命令`npm config set registry https://registry.npm.taobao.org`切换阿里的源
    - 通过`npm config get registry`查看npm的源  
 - 然后进入`vue项目`中（含vue的`目录结构`），通过命令`npm install`安装依赖  
