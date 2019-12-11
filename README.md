@@ -124,6 +124,8 @@ https://github.com/Cswapi/Web-Server
 ## 后端安装
 后端使用`golang`实现，`go get`安装  
 `go get github.com/Cswapi/Web-Server`  
+  
+进入本地go工作目录的`github.com/Cswapi/Web-Server`使用命令：`go run main.go`运行服务端，监听8080端口
 
 ## 页面设计
 本项目设计了以下三个页面：  
@@ -139,26 +141,24 @@ https://github.com/Cswapi/Web-Server
 
 
 ## API设计
-本项目参考`swapi`，实现了相应的6个基本的获取资源的`服务API`，同时增加了`用户注册`和`用户登陆`的API  
+本项目参考`swapi`，实现了相应的6个基本的获取资源的`服务API`，同时增加了`用户注册`和`用户登陆`的API，下面是API介绍与测试：  
+先运行Web-Server  
 ### 资源获取API
 使用`GET`请求  
-1. 获取Root资源信息（API服务列表）：`http://localhost:8080/api`   
+1. 获取每种资源的首页信息：
+   - `http://localhost:8080/api/films/`
+   - `http://localhost:8080/api/people/`
+   - `http://localhost:8080/api/planets/`
+   - `http://localhost:8080/api/species/`
+   - `http://localhost:8080/api/starships/`
+   - `http://localhost:8080/api/vehicles/`    
 
     测试：
-    ![](images/)
-
-2. 获取每种资源的首页信息：
-   - `http://localhost:8080/api/films`
-   - `http://localhost:8080/api/people`
-   - `http://localhost:8080/api/planets`
-   - `http://localhost:8080/api/species`
-   - `http://localhost:8080/api/starships`
-   - `http://localhost:8080/api/vehicles`    
-
-    测试：
-    ![](images/)
+    ![](images/test4.png)
+    ![](images/test5.png)  
+    ![](images/test6.png) 
   
-3. 分页获取每种资源的信息：
+2. 分页获取每种资源的信息：
    - `http://localhost:8080/api/films/?pages=%d`
    - `http://localhost:8080/api/people/?pages=%d`
    - `http://localhost:8080/api/planets/?pages=%d`
@@ -167,7 +167,11 @@ https://github.com/Cswapi/Web-Server
    - `http://localhost:8080/api/vehicles/?pages=%d`
   
     测试：
-    ![](images/)  
+    ![](images/test7.png)  
+    ![](images/test8.png)
+    ![](images/test9.png)
+    ![](images/test10.png)  
+    ![](images/test11.png)   
 
 3. 分条获取每种资源的信息：  
    - `http://localhost:8080/api/films/%d`
@@ -177,21 +181,28 @@ https://github.com/Cswapi/Web-Server
    - `http://localhost:8080/api/starships/%d`
    - `http://localhost:8080/api/vehicles/%d`  
 
-    测试：
-    ![](images/)  
+    测试：  
+
+    ![](images/test1.png)    
 
 ### 用户注册API  
 使用`POST`请求  
 `http://localhost:8080/register`  
 
-测试：
-![](images/)
+测试：  
+
+![](images/re.png)  
+![](images/re2.png) 
+
 ### 用户登陆API  
 使用`POST`请求  
 `http://localhost:8080/login`  
 
 测试：  
-![](images/)
+
+![](images/log.png)  
+![](images/log2.png)  
+
 ## 项目成员
 
 |姓名|学号|负责工作|
